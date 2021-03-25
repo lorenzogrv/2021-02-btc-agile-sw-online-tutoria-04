@@ -1,0 +1,13 @@
+language: 
+  - node_js
+node_js:
+  - '12'
+stages:
+  - test 
+before_script:
+  - npm ci
+script: 
+  - npm install --save-dev@types/jest @types/node jest ts-jest typescript
+  - npm install --save-dev jest
+  - npm i @types/jest
+  - npm test
